@@ -5,7 +5,7 @@ from typing import Callable
 
 from aoc2023.utils.files import read_as_lines
 
-INPUT_PATH = os.path.join(os.path.dirname(__file__), 'input.txt')
+INPUT_PATH = os.path.join(os.path.dirname(__file__), "input.txt")
 
 
 @dataclass
@@ -22,7 +22,7 @@ class Game:
 
 
 def parse_reveal(line: str) -> Counts:
-    pattern = r'(\d+) (red|green|blue)'
+    pattern = r"(\d+) (red|green|blue)"
     matches = re.findall(pattern, line)
 
     red, green, blue = 0, 0, 0
@@ -32,40 +32,44 @@ def parse_reveal(line: str) -> Counts:
         color = match[1]
 
         match color:
-            case 'red':
+            case "red":
                 red = count
-            case 'green':
+            case "green":
                 green = count
-            case 'blue':
+            case "blue":
                 blue = count
             case _:
-                raise ValueError('unknown color revealed')
+                raise ValueError("unknown color revealed")
 
     return Counts(red=red, green=green, blue=blue)
 
 
 def parse_id(line: str) -> int:
-    pattern = r'\d+'
+    pattern = r"\d+"
     match = re.search(pattern, line)
 
     if not match:
-        raise ValueError('could not parse the game id')
+        raise ValueError("could not parse the game id")
 
     return int(match.group())
 
 
 def parse_game(line: str) -> Game:
-    [id_side, reveals_side] = line.split(':', 1)
+    [id_side, reveals_side] = line.split(":", 1)
 
     return Game(
         id=parse_id(id_side),
-        reveals=[parse_reveal(r) for r in reveals_side.split(';')],
+        reveals=[parse_reveal(r) for r in reveals_side.split(";")],
     )
 
 
 def reveal_is_max(max_counts: Counts) -> Callable[[Counts], bool]:
     def is_max(reveal: Counts) -> bool:
-        return reveal.red <= max_counts.red and reveal.green <= max_counts.green and reveal.blue <= max_counts.blue
+        return (
+            reveal.red <= max_counts.red
+            and reveal.green <= max_counts.green
+            and reveal.blue <= max_counts.blue
+        )
 
     return is_max
 
