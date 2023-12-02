@@ -3,18 +3,18 @@ import re
 
 from aoc2023.utils.files import read_as_lines
 
-INPUT_PATH = os.path.join(os.path.dirname(__file__), 'input.txt')
+INPUT_PATH = os.path.join(os.path.dirname(__file__), "input.txt")
 
 digit_map = {
-    'one': '1',
-    'two': '2',
-    'three': '3',
-    'four': '4',
-    'five': '5',
-    'six': '6',
-    'seven': '7',
-    'eight': '8',
-    'nine': '9'
+    "one": "1",
+    "two": "2",
+    "three": "3",
+    "four": "4",
+    "five": "5",
+    "six": "6",
+    "seven": "7",
+    "eight": "8",
+    "nine": "9",
 }
 
 
@@ -25,26 +25,26 @@ def _to_int(in_str: str) -> str:
     if in_str in digit_map:
         return digit_map[in_str]
 
-    raise ValueError('not a known digit')
+    raise ValueError("not a known digit")
 
 
 def num_digits(in_str: str) -> list[str]:
-    digit_pattern = r'\d'
+    digit_pattern = r"\d"
     matches_list = [match.group() for match in re.finditer(digit_pattern, in_str)]
 
     if not matches_list:
-        raise ValueError('no digits found')
+        raise ValueError("no digits found")
 
     return matches_list
 
 
 def any_digits(in_str: str) -> list[str]:
-    digit_pattern = '|'.join([r'\d', *digit_map.keys()])
-    first_match = re.match(fr'.*?({digit_pattern}).*', in_str)
-    last_match = re.match(fr'.*({digit_pattern}).*?', in_str)
+    digit_pattern = "|".join([r"\d", *digit_map.keys()])
+    first_match = re.match(rf".*?({digit_pattern}).*", in_str)
+    last_match = re.match(rf".*({digit_pattern}).*?", in_str)
 
     if not first_match:
-        raise ValueError('no digits found')
+        raise ValueError("no digits found")
 
     first_digit = _to_int(first_match.groups()[0])
 
