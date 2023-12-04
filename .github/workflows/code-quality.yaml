@@ -12,6 +12,10 @@ jobs:
       - name: Black
         uses: psf/black@stable
 
+      - name: Flake8
+        run: pipx run flake8 .
+
+
   type-check:
     runs-on: ubuntu-latest
     steps:
