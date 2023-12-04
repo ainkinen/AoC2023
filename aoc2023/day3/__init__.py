@@ -1,7 +1,6 @@
 import os
 import re
 from dataclasses import dataclass
-from typing import Any
 
 from aoc2023.utils.files import read_as_lines
 
@@ -81,7 +80,8 @@ def part2(input_path: str = INPUT_PATH) -> int:
 
     gears: list[list[int]] = []
 
-    # Stupid looping. Should go through the numbers once and link them to possible gear locations.
+    # Stupid looping.
+    # Should go through the numbers once and link them to possible gear locations.
     for loc in possible_gear_locations:
         next_to_loc = adjacent(loc)
 
