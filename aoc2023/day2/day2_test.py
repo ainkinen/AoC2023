@@ -1,6 +1,6 @@
 import os
 
-from aoc2023.day2 import part1, part2, parse_reveal, Counts, parse_game, Game, parse_id
+from aoc2023.day2 import Counts, Game, parse_game, parse_id, parse_reveal, part1, part2
 
 TEST_INPUT_PATH = os.path.join(os.path.dirname(__file__), "test_input.txt")
 TEST_INPUT_2_PATH = os.path.join(os.path.dirname(__file__), "test_input_2.txt")

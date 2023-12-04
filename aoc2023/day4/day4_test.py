@@ -1,6 +1,6 @@
 import os
 
-from aoc2023.day4 import part1, part2, parse_card, Card
+from aoc2023.day4 import Card, parse_card, part1, part2
 
 TEST_INPUT_PATH = os.path.join(os.path.dirname(__file__), "test_input.txt")
 TEST_INPUT_2_PATH = os.path.join(os.path.dirname(__file__), "test_input_2.txt")
