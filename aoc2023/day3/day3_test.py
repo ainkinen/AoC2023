@@ -1,6 +1,6 @@
 import os
 
-from aoc2023.day3 import part1, part2, adjacent, Coord
+from aoc2023.day3 import Coord, adjacent, part1, part2
 
 TEST_INPUT_PATH = os.path.join(os.path.dirname(__file__), "test_input.txt")
 TEST_INPUT_2_PATH = os.path.join(os.path.dirname(__file__), "test_input_2.txt")

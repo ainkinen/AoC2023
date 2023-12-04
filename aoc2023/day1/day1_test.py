@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from aoc2023.day1 import part1, part2, num_digits, any_digits
+from aoc2023.day1 import any_digits, num_digits, part1, part2
 
 TEST_INPUT_PATH = os.path.join(os.path.dirname(__file__), "test_input.txt")
 TEST_INPUT_2_PATH = os.path.join(os.path.dirname(__file__), "test_input_2.txt")
