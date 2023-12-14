@@ -7,8 +7,8 @@ TEST_INPUT_2_PATH = os.path.join(os.path.dirname(__file__), "test_input_2.txt")
 
 
 def test_part1():
-    assert part1(TEST_INPUT_PATH) is None
+    assert part1(TEST_INPUT_PATH) == 0
 
 
 def test_part2():
-    assert part2(TEST_INPUT_2_PATH) is None
+    assert part2(TEST_INPUT_2_PATH) == 0
