@@ -1,0 +1,33 @@
+0   1   2   3   4   5   6   7   8   9   10  11
+vl  lv  rd  lk  hc  kb  pc  rz  fr  mr  jd  mf
+1    1          1       1   1   1   1   1   1
+zp  vl
+    lk
+    rd
+    kb
+    xl* df  rx
+
+cs  zb  vz  nd  jg  fl  nf  sm  cp  kk  bj  lj
+1           1   1   1   1   1       1   1   1
+rg  cs
+    zb
+    cp
+    vz
+    gp* df  rx
+
+cn  sn  fd  nt  kq  qq  sq  kl  mb  nh  rq  ch
+1           1   1       1   1   1   1   1   1
+sj  xp* df  rx
+    qq
+    cn
+    fd
+    sn
+
+
+ml  xt  bc  nb  qj  hd  bq  tb  pk  fq  bh  pr
+1       1       1   1       1   1   1   1   1
+pp  ln* df  rx
+    ml
+    xt
+    bq
+    nb
