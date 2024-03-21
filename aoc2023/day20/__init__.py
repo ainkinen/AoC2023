@@ -31,8 +31,7 @@ class Module(ABC):
     outputs: list[str]
 
     @abstractmethod
-    def pulse_in(self, signal: Signal) -> list[Output]:
-        ...
+    def pulse_in(self, signal: Signal) -> list[Output]: ...
 
 
 @dataclass
